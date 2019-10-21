@@ -1,0 +1,16 @@
+{
+    "name": "hoc/produits_natif",
+    "description": "Rappel PHP natif avant Symfony",
+    "authors": [
+        {
+            "name": "Mouaz Saadaoui",
+            "email": "mouazmouaz@hotmail.fr"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}

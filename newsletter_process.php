@@ -1,11 +1,10 @@
 <?php
 
-use App\Utils;
-
+require_once 'vendor/autoload.php';
 session_start();
 // var_dump($_POST);
-require_once 'vendor/autoload.php';
 
+use App\Utils;
 
 // TODO: insérer l'email en bdd
 

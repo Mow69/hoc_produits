@@ -4,8 +4,6 @@ namespace App;
 
 class Utils
 {
-    private function __construct()
-    { }
 
     static public function redirect(string $location)
     {

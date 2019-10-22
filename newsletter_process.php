@@ -1,8 +1,15 @@
 <?php
+
+use App\Utils;
+
 session_start();
-var_dump($_POST);
+// var_dump($_POST);
+require_once 'vendor/autoload.php';
+
 
 // TODO: insérer l'email en bdd
+
+$bdd = new PDO("mysql:host=127.0.0.1;dbname=hoc_produits;charset=utf8", 'hoc_produits', 'hoc_produits');
 
 $req = $bdd->prepare('INSERT INTO newsletter(id, email, subscribed) VALUES(:id, :email, :subscribed)');
 $req->execute(array(
@@ -33,9 +40,5 @@ if (array_key_exists('notifications', $_SESSION) and is_null('notifications', $_
     ];
 }
 
-
-
 // rediriger vers la page d'accueil
-// TODO: factoriser cette méthode dans une classe utilitaire
-header('Location: index.php');
-exit;
+Utils::redirect('index.php');

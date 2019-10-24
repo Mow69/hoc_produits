@@ -10,6 +10,7 @@ foreach ($produits as $produit) {
         require_once 'templates/produit/item-jumbotron.php';
     }
 }
+require_once 'templates/connexion/connexion_section.php';
 
 require_once 'templates/newsletter/subcription_section.php';
 
